@@ -18,11 +18,11 @@ export default function ({ dialogRef, data, id, setData }) {
 
     return (
         <dialog ref={dialogRef}>
-            <section className='d-flex flex-column gap-3'>
-                <input type="number" value={value} onChange={(e) => setValue(e.target.value)} className='w-100 px-2 py-1' />
-                <div className='d-flex align-items-center justify-content-end gap-2'>
-                    <button id='save' onClick={handleSave} className='btn btn-primary text-capitalize'>save</button>
-                    <button id='cancel' onClick={close} className='btn btn-danger text-capitalize'>cancel</button>
+            <section className='d-flex flex-column gap-4'>
+                <input type="number" value={value} onChange={(e) => setValue(e.target.value)} className='w-100 px-2 py-1 fs-3' />
+                <div className='d-flex align-items-center justify-content-end gap-3'>
+                    <button id='save' onClick={handleSave} className='btn btn-primary text-capitalize fs-4'>save</button>
+                    <button id='cancel' onClick={close} className='btn btn-danger text-capitalize fs-4'>cancel</button>
                 </div>
             </section>
         </dialog>

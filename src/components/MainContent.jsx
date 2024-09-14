@@ -117,7 +117,7 @@ export default function MainContent() {
         <>
             <main className='vh-100 d-flex align-items-center p-1' style={{ width: 'fit-content' }}>
                 <section className={`d-flex align-items-center justify-content-start rounded-5 py-2 ${width > 5000 ? 'px-3' : 'px-5'}`} style={{ backgroundColor: '#bb1000' }}>
-                    <div className='d-flex align-items-center justify-content-start gap-1'>
+                    <div className='d-flex align-items-center justify-content-start' style={{ gap: '3px' }}>
                         {data && data.map((ele) => {
                             if (ele.type === 'cityData') {
                                 return <CityData key={ele.id} currentData={ele} />
@@ -135,13 +135,13 @@ export default function MainContent() {
 
 const CityData = ({ currentData }) => {
     return (
-        <div style={{ width: '.2rem', position: 'relative', rotate: currentData?.isUpward ? '0deg' : '180deg' }}>
+        <div style={{ width: '.1rem', position: 'relative', rotate: currentData?.isUpward ? '0deg' : '180deg' }}>
             <div style={{ position: 'absolute', bottom: '4rem', left: '-1rem', writingMode: 'vertical-rl', rotate: currentData?.isUpward ? '180deg' : '0deg' }}>
                 <p className='d-flex align-items-center gap-1 m-0 p-0 text-nowrap'><span>{currentData?.inHindi}</span> | <span><strong>{currentData?.inEnglish}</strong></span></p>
                 <p className={`m-0 p-0 text-${currentData?.isUpward ? 'start' : 'end'}`}>{`(${currentData?.distance})`}</p>
             </div>
             <div style={{
-                width: '.2rem',
+                width: '.1rem',
                 height: '6rem',
                 position: 'absolute',
                 top: '-2.65rem',
@@ -149,12 +149,12 @@ const CityData = ({ currentData }) => {
             }}>
                 <p
                     style={{
-                        width: '.7rem',
-                        height: '.7rem',
+                        width: '.5rem',
+                        height: '.5rem',
                         position: 'absolute',
-                        top: '-.7rem',
-                        left: '-.25rem',
-                        border: '.2rem solid #ffff00',
+                        top: '-.5rem',
+                        left: '-.2rem',
+                        border: '.1rem solid #ffff00',
                         borderRadius: '50%',
                     }}></p>
             </div>
